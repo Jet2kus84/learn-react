@@ -1,6 +1,8 @@
 ﻿import React, { useState } from 'react'
 import TodoItem from './TodoItem'
 
+import './TodoList.css';
+
 const initialTasks = [
     { id: self.crypto.randomUUID(), text: "Drink some coffe", },
     { id: self.crypto.randomUUID(), text: "Create a TODO app", },

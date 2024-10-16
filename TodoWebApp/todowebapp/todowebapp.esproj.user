@@ -7,7 +7,7 @@
   "type": "chrome",
   "request": "launch",
   "url": "http://localhost:5173",
-  "webRoot": "C:\\Users\\Jet2k\\source\\repos\\TodoWebApp\\TodoWebApp"
+  "webRoot": "C:\\Users\\Jet2k\\Source\\Repos\\Jet2kus84\\learn-react\\TodoWebApp\\TodoWebApp"
 }</LaunchJsonTarget>
   </PropertyGroup>
 </Project>
