@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "todowebapp", "TodoWebApp\todowebapp.esproj", "{7D97F2D8-2E9A-4AAD-A963-D929F3E99F0F}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "happy.code.app", "Happy.Code.App\happy.code.app.esproj", "{C55294C1-462C-4905-BEFF-E80C66C9AC90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,12 @@ Global
 		{7D97F2D8-2E9A-4AAD-A963-D929F3E99F0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D97F2D8-2E9A-4AAD-A963-D929F3E99F0F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7D97F2D8-2E9A-4AAD-A963-D929F3E99F0F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C55294C1-462C-4905-BEFF-E80C66C9AC90}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
