@@ -1,2 +1,3 @@
 C:\Users\Jet2k\source\repos\TodoWebApp\TodoWebApp\obj\Debug\todowebapp.esproj.CoreCompileInputs.cache
 C:\Users\Jet2k\Source\Repos\Jet2kus84\learn-react\TodoWebApp\TodoWebApp\obj\Debug\todowebapp.esproj.CoreCompileInputs.cache
+C:\Users\Jet2k\source\repos\Jet2kus84\learn-react\Learn.React\TodoWebApp\obj\Debug\todowebapp.esproj.CoreCompileInputs.cache

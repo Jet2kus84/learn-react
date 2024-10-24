@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <PackageJsonName Condition="$(PackageJsonName) == ''">todowebapp</PackageJsonName>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">learn.react</PackageJsonName>
     <PackageJsonPrivate Condition="$(PackageJsonPrivate) == ''">true</PackageJsonPrivate>
     <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">0.0.0</PackageJsonVersion>
     <PackageJsonType Condition="$(PackageJsonType) == ''">module</PackageJsonType>
