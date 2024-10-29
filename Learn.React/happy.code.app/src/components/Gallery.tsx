@@ -1,5 +1,6 @@
 import { React } from 'react'
 import Profile from './Profile';
+import Avatar from './Avatar';
 
 export default function Gallery() {
     return (
@@ -8,6 +9,7 @@ export default function Gallery() {
             <Profile />
             <Profile />
             <Profile />
+            <Avatar />
         </section>
     );
 }
