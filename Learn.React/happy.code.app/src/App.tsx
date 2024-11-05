@@ -1,18 +1,22 @@
-import React from 'react'
 //import './App.css'
 import Gallery from './components/Gallery'
-import Profile from './components/Profile'
+import Drink from './components/Lessons/ConditionalRendering/Drink'
+import PackingList from './components/PackingList'
 import TodoList from './components/TodoList'
 
 function App() {
   return (
-    <>
-          <Gallery />
-          <Profile />
+      <>
+        <section>
+            <Gallery />
+            <TodoList />
+            <PackingList />
+          </section>
 
-          <div>
-            <TodoList></TodoList>
-          </div>
+          <section>
+              <Drink name="tea" />
+              <Drink name="coffee" />
+          </section>
     </>
   )
 }

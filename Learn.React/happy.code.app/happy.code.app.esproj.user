@@ -7,7 +7,7 @@
   "type": "chrome",
   "request": "launch",
   "url": "http://localhost:5173",
-  "webRoot": "C:\\Users\\Jet2k\\source\\repos\\Jet2kus84\\learn-react\\TodoWebApp\\Happy.Code.App"
+  "webRoot": "C:\\Users\\Jet2k\\source\\repos\\Jet2kus84\\learn-react\\Learn.React\\Happy.Code.App"
 }</LaunchJsonTarget>
   </PropertyGroup>
 </Project>

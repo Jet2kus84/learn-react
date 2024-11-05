@@ -9,6 +9,9 @@ const person = {
 };
 
 export default function TodoList() {
+    const width = 100;
+    const height = 100;
+
     return (
         <>
             <div style={person.theme}>
@@ -17,6 +20,8 @@ export default function TodoList() {
                     className="avatar"
                     src="https://i.imgur.com/7vQD0fPs.jpg"
                     alt="Gregorio Y. Zara"
+                    width={width}
+                    height={height}
                 />
 
                 <ul style={{
