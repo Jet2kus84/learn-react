@@ -1,8 +1,7 @@
-import React from 'react';
 import { Line } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 
-const Bar = ({labelData, bmiData}) => {
+const Bar = ({labelData, bmiData}) => { 
     const data = canvas => {
         const ctx = canvas.getContext('2d');
         const gradient = ctx.createLinearGradient(63, 81, 181, 700);
@@ -16,10 +15,11 @@ const Bar = ({labelData, bmiData}) => {
                     label: 'BMI',
                     data: bmiData,
                     backgroundColor: gradient,
-                    borderColor: '#172b4d',
-                    borderWidth: 1,
-                    barPercentage: 0.5,
-                    categoryPercentage: 0.5
+                    borderColor: '#3F51B5',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointHoverBorderColor: 'white',
+                    pointHoverBorderWidth: 2
                 }
             ]
         };

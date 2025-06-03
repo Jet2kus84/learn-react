@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-color: #172b4d;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+input {
+  background-color: #fff !important;
+  border-radius: 44px !important;
+  width: 90% !important;
+  padding: 0px 15px !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+label {
+  display: block;
+  color: #fff !important;
+  font-size: 1rem !important;
+}
+
+.calculate-btn {
+  background-color: #3f51b5;
+  padding: 15px 50px;
+  color: white;
+  font-size: 16px;
+  border-radius: 44px;
+  cursor: pointer;
+  border: 1px solid #3f51b5;
+  margin-bottom: 40px;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+}
+
+.calculate-btn:hover {
+  background-color: #fff;
+  transform: translate(0px, -2px);
+  color: #5364c3;
+  box-shadow: 0px 15px 30px -12px rgba(255, 255, 255, 0.2);
+}
+
+.calculate-btn:focus {
+  background-color: #32408f;
+}
+
+.calculate-btn:focus:hover {
+  color: white;
+}
+
+.calculate-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+.calculate-btn:disabled:hover {
+  box-shadow: none;
+  transform: translate(0, 0);
+}
+
+.data-container {
+  background-color: #1f3a67;
+  border-radius: 11px;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .card {
-  padding: 2em;
+  background-color: #274881 !important;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+.card-title {
+  font-weight: 500 !important;
+  text-align: center;
+}
+
+.card-data {
+  display: flex;
+  justify-content: space-around;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-weight: 700;
+  padding: 5px 9px;
+  cursor: pointer;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+}
+
+.delete-btn:focus {
+  background-color: #e74c3c;
 }

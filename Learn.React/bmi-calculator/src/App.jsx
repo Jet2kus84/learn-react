@@ -1,35 +1,93 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import './App.css'
+import { getData, storeData } from './helpers/localStorage'
+
+import BmiForm from './components/BmiForm/BmiForm';
+import Bar from './components/Bar/Bar';
+import Info from './components/Info/Info';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const initialState = () => getData('data') || [];
+  const [state, setState] = useState(initialState);
+  const [data, setDate] = useState(initialState);
+
+  useEffect(() => {
+    storeData('data', state);
+    const date = state.map(obj => obj.date);
+    const bmi = state.map(obj => obj.bmi);
+    let newData = { date, bmi };
+    setDate(newData);
+  }, [state]);
+
+  const handleChange = val => {
+    let heightInM = val.height / 100;
+    val.bmi = (val.weight / (heightInM * heightInM)).toFixed(2);
+    val.id = uuidv4();
+    let newVal = [...state, val];
+    let len = newVal.length;
+    if (len > 7) newVal = newVal.slice(1, len);
+    setState(newVal);
+  };
+
+  const handleDelete = id => {
+    storeData('lastState', state);
+    let newState = state.filter(i => {
+      return i.id !== id;
+    });
+    setState(newState);
+  };
+
+  const handleUndo = () => {
+    setState(getData('lastState'));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='container'>
+      <div className='row center'>
+        <h1 className='white-text'> BMI Tracker </h1>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='row'>
+        <div className='col m12 s12'>
+          <BmiForm change={handleChange} />
+          <Bar labelData={data.date} bmiData={data.bmi} />
+          <div>
+            <div className='row center'>
+              <h4 className='white-text'>7 Day Data</h4>
+            </div>
+            <div className='data-container row'>
+              {state.length > 0 ? (
+                <>
+                  {state.map(info => (
+                    <Info
+                      key={info.id}
+                      id={info.id}
+                      weight={info.weight}
+                      height={info.height}
+                      date={info.date}
+                      bmi={info.bmi}
+                      deleteCard={handleDelete}
+                    />
+                  ))}
+                </>
+              ) : (
+                  <div className='center white-text'>No log found</div>
+                )}
+            </div>
+          </div>
+          {getData('lastState') !== null ? (
+            <div className='center'>
+              <button className='calculate-btn' onClick={handleUndo}>
+                Undo
+              </button>
+            </div>
+          ) : (
+              ''
+            )}
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default App
